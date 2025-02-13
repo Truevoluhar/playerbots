@@ -307,6 +307,7 @@ namespace ai
             creators["enable onyxia fight strategy"] = &ActionContext::onyxia_enable_fight_strategy;
             creators["disable onyxia fight strategy"] = &ActionContext::onyxia_disable_fight_strategy;
 
+
             creators["enable magmadar fight strategy"] = &ActionContext::magmadar_enable_fight_strategy;
             creators["disable magmadar fight strategy"] = &ActionContext::magmadar_disable_fight_strategy;
             creators["move away from magmadar"] = &ActionContext::magmadar_move_away;
@@ -330,6 +331,7 @@ namespace ai
 
             creators["enable four horseman fight strategy"] = &ActionContext::fourhorseman_enable_fight_strategy;
             creators["disable four horseman fight strategy"] = &ActionContext::fourhorseman_disable_fight_strategy;
+            creators["create onyxia formation"] = &ActionContext::onyxia_move_to_flank_action;
         }
 
     private:
@@ -565,6 +567,7 @@ namespace ai
         // Dungeon Boss Actions
         static Action* onyxia_enable_fight_strategy(PlayerbotAI* ai) { return new OnyxiaEnableFightStrategyAction(ai); }
         static Action* onyxia_disable_fight_strategy(PlayerbotAI* ai) { return new OnyxiaDisableFightStrategyAction(ai); }
+        static Action* onyxia_move_to_flank_action(PlayerbotAI* ai) { return new OnyxiaMoveToFlankAction(ai); }
 
         static Action* magmadar_enable_fight_strategy(PlayerbotAI* ai) { return new MagmadarEnableFightStrategyAction(ai); }
         static Action* magmadar_disable_fight_strategy(PlayerbotAI* ai) { return new MagmadarDisableFightStrategyAction(ai); }

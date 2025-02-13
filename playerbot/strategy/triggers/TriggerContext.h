@@ -271,6 +271,7 @@ namespace ai
             // Dungeon Boss Triggers
             creators["start onyxia fight"] = &TriggerContext::onyxia_start_fight;
             creators["end onyxia fight"] = &TriggerContext::onyxia_end_fight;
+            creators["onyxia formation"] = &TriggerContext:onyxia_formation;
 
             creators["start magmadar fight"] = &TriggerContext::magmadar_start_fight;
             creators["end magmadar fight"] = &TriggerContext::magmadar_end_fight;
@@ -516,6 +517,7 @@ namespace ai
         // Dungeon Boss Triggers
         static Trigger* onyxia_start_fight(PlayerbotAI* ai) { return new OnyxiaStartFightTrigger(ai); }
         static Trigger* onyxia_end_fight(PlayerbotAI* ai) { return new OnyxiaEndFightTrigger(ai); }
+        static Trigger* onyxia_formation(PlayerbotAI* ai) { return new OnyxiaFormation(ai); }
         
         static Trigger* magmadar_start_fight(PlayerbotAI* ai) { return new MagmadarStartFightTrigger(ai); }
         static Trigger* magmadar_end_fight(PlayerbotAI* ai) { return new MagmadarEndFightTrigger(ai); }

@@ -1,6 +1,7 @@
 #pragma once
 #include "DungeonActions.h"
 #include "ChangeStrategyAction.h"
+#include "MovementActions.h"
 
 namespace ai
 {
@@ -27,4 +28,12 @@ namespace ai
     public:
         OnyxiaDisableFightStrategyAction(PlayerbotAI* ai) : ChangeAllStrategyAction(ai, "disable onyxia fight strategy", "-onyxia") {}
     };
+
+    class OnyxiaMoveToFlankAction : public MovementAction
+    {
+    public:
+        OnyxiaMoveToFlankAction(PlayerbotAI* ai) : MovementAction(ai, "create onyxia formation") {}
+        virtual bool Execute(Event& event);
+    }
+    
 }

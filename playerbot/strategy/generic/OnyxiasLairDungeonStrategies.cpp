@@ -16,7 +16,7 @@ void OnyxiaFightStrategy::InitCombatTriggers(std::list<TriggerNode*>& triggers)
     // ...
     triggers.push_back(new TriggerNode(
         "onyxia formation",
-        NextAction::array(0, new NextAction("create onyxia cormation", 100.0f), NULL)
+        NextAction::array(0, new NextAction("create onyxia formation", 100.0f), NULL)
     ));
 }
 
