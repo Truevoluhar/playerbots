@@ -26,4 +26,11 @@ namespace ai
     public:
         OnyxiaEndFightTrigger(PlayerbotAI* ai) : EndBossFightTrigger(ai, "end onyxia fight", "onyxia", 10184) {}
     };
+
+    class OnyxiaFormation : public Trigger
+    {
+    public:
+        OnyxiaFormation(PlayerbotAI* ai) : Trigger(ai, "onyxia formation", 2) {}
+        bool IsActive() override;
+    }
 }

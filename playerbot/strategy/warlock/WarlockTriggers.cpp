@@ -253,3 +253,23 @@ uint32 SoulstoneTrigger::GetItemId()
 
     return itemId;
 }
+
+
+// AQ40 - Obsidian Eradicator Drain Mana implementation
+bool ObsidianEradicatorDrainManaTrigger::isActive() {
+    Unit* target = ai->GetBot()->GetTarget();
+    
+    if (!target) {
+        return false;
+    }
+
+    if (ai->GetBot()->GetMapId() != 531) {
+        return false;
+    }
+
+    if (!target->GetEntry() != 15262) {
+        return false;
+    }
+
+    return true;
+}

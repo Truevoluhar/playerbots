@@ -352,6 +352,7 @@ namespace ai
                 creators["spell lock enemy healer"] = &TriggerFactoryInternal::spell_lock_enemy_healer;
                 creators["seed of corruption on attacker"] = &TriggerFactoryInternal::seed_of_corruption_on_attacker;
                 creators["soulstone"] = &TriggerFactoryInternal::soulstone;
+                creators["obsidian eradicator drain mana"] = &TriggerFactoryInternal::obsidian_eradicator_drain_mana;
             }
 
         private:
@@ -409,6 +410,7 @@ namespace ai
             static Trigger* spell_lock_enemy_healer(PlayerbotAI* ai) { return new SpellLockEnemyHealerTrigger(ai); }
             static Trigger* seed_of_corruption_on_attacker(PlayerbotAI* ai) { return new SeedOfCorruptionOnAttackerTrigger(ai); }
             static Trigger* soulstone(PlayerbotAI* ai) { return new SoulstoneTrigger(ai); }
+            static Trigger* obsidian_eradicator_drain_mana(PlayerbotAI* ai) { return new ObsidianEradicatorDrainManaTrigger(ai); }
         };
 
         class AiObjectContextInternal : public NamedObjectContext<Action>

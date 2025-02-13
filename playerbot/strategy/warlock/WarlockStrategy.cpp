@@ -34,6 +34,12 @@ void WarlockStrategy::InitCombatTriggers(std::list<TriggerNode*>& triggers)
 {
     ClassStrategy::InitCombatTriggers(triggers);
 
+    // AQ40 - Obsidian Eradicator Mana Drain
+    triggers.push_back(new TriggerNode(
+        "obsidian eradicator drain mana",
+        NextAction::array(0, new NextAction("drain mana", ACTION_EMERGENCY + 1), NULL)
+    ));
+
     triggers.push_back(new TriggerNode(
         "critical health",
         NextAction::array(0, new NextAction("sacrifice", ACTION_EMERGENCY), NULL)));

@@ -341,6 +341,7 @@ namespace ai
             static Trigger* mind_blast(PlayerbotAI* ai) { return new MindBlastTrigger(ai); }
             static Trigger* smite(PlayerbotAI* ai) { return new SmiteTrigger(ai); }
             static Trigger* holy_fire(PlayerbotAI* ai) { return new HolyFireTrigger(ai); }
+            static Trigger* obsidian_eradicator_mana_burn(PlayerbotAI* ai) { return new ObsidianEradicatorManaBurnTrigger(ai); }
         };
 
         class AiObjectContextInternal : public NamedObjectContext<Action>

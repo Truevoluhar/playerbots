@@ -92,6 +92,11 @@ void PriestStrategy::InitCombatTriggers(std::list<TriggerNode*>& triggers)
 {
     ClassStrategy::InitCombatTriggers(triggers);
 
+    // AQ40 - Obsidian Eradicator Mana Burn
+    triggers.push_back(new TriggerNode(
+        "obsidian eradicator mana burn",
+        NextAction::array(0, new NextAction("mana burn", ACTION_EMERGENCY + 1), NULL)));
+
     triggers.push_back(new TriggerNode(
         "critical health",
         NextAction::array(0, new NextAction("desperate prayer", ACTION_EMERGENCY), NULL)));

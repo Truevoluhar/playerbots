@@ -20,3 +20,22 @@ bool ShadowfiendTrigger::IsActive()
 {
     return BoostTrigger::IsActive() && bot->IsSpellReady(34433);
 }
+
+bool ObsidianEradicatorManaBurnTrigger::IsActive()
+{
+    Unit* target = ai->GetBot()->GetTarget();
+
+    if (!target) {
+        return false;
+    }
+
+    if (ai->GetBot()->GetMapId() != 531) {
+        return false;
+    }
+
+    if (target->GetEntry() != 15262) {
+        return false;
+    }
+
+    return true;
+}

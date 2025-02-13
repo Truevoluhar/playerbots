@@ -118,4 +118,11 @@ namespace ai
         FearWardTrigger(PlayerbotAI* ai) : SpellTargetTrigger(ai, "fear ward", "buff targets", true, true) {}
         std::string GetTargetName() override { return "self target"; }
     };
+
+    class ObsidianEradicatorManaBurnTrigger : public Trigger
+    {
+    public:
+        ObsidianEradicatorManaBurnTrigger(PlayerbotAI* ai) : Trigger(ai, "obsidian eradicator mana burn", 1) {}
+        bool IsActive() override;
+    };
 }

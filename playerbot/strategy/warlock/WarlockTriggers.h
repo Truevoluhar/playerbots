@@ -297,4 +297,12 @@ namespace ai
         std::string GetTargetName() override { return "self target"; }
         uint32 GetItemId() override;
     };
+
+
+    // AQ40 - Obsidian Eradicator trigger
+    class ObsidianEradicatorDrainManaTrigger : public Trigger {
+        public: 
+            ObsidianEradicatorDrainManaTrigger(PlayerbotAI* ai) : Trigger(ai, "obsidian eradicator", 1) {}
+            bool IsActive() override;
+    }
 }
